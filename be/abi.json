@@ -1,0 +1,131 @@
+{
+    "calculator": {
+      "contract_address": "0xA9343B197c2a695dB9CA95EAa4EC5141BB9654D4",
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_a",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_b",
+              "type": "uint256"
+            }
+          ],
+          "name": "pengurangan",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_a",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_b",
+              "type": "uint256"
+            }
+          ],
+          "name": "perkalian",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_a",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_b",
+              "type": "uint256"
+            }
+          ],
+          "name": "perpangkatan",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_a",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_b",
+              "type": "uint256"
+            }
+          ],
+          "name": "pertambahan",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "readHasilPengurangan",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "readHasilPerkalian",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "readHasilPerpangkatan",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "readHasilPertambahan",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+    }
+}

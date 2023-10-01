@@ -1,3 +1,9 @@
+require('dotenv').config();
+
+const HDWalletProvider  = require("@truffle/hdwallet-provider");
+const privKeyDepLoyer   = process.env.DEPLOYER_PRIVATE_KEY
+const mainRPC           = `https://:${process.env.RPC_SECRET_KEY}@${process.env.RPC_URL}`
+
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -58,6 +64,13 @@ module.exports = {
    */
 
   networks: {
+    deploy_net: {
+      provider: () => new HDWalletProvider(privKeyDepLoyer, mainRPC),
+      network_id: "*",
+      networkCheckTimeout: 10000,
+      timeoutBlocks: 200,
+      skipDryRun: false
+     },
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
     // You should run a client (like ganache, geth, or parity) in a separate terminal
@@ -106,16 +119,16 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.17",      // Fetch exact version from solc-bin (default: truffle's version)
-      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      // settings: {          // See the solidity docs for advice about optimization and evmVersion
-      //  optimizer: {
-      //    enabled: false,
-      //    runs: 200
-      //  },
-      //  evmVersion: "byzantium"
-      // }
-    }
+      version: "0.8.20",    // Fetch exact version from solc-bin (default: truffle's version)
+      docker: false,        // Use "0.5.1" you've installed locally with docker (default: false)
+      settings: {          // See the solidity docs for advice about optimization and evmVersion
+       optimizer: {
+         enabled: true,
+         runs: 200
+       },
+       evmVersion: "paris"
+      }
+   }
   },
 
   // Truffle DB is currently disabled by default; to enable it, change enabled:

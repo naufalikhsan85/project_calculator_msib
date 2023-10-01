@@ -8,7 +8,7 @@ pengurangan, pertambhan,
 perkalian, perpangkatan dari 
 2 input dan di store di global variabel
 */
-contract Calculator {
+contract Calculator{
 
     //define global variabel
     uint256 internal hasil_pengurangan;
